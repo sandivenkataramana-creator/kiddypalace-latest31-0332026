@@ -1,0 +1,264 @@
+/* .about-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 60vh;
+}
+
+.about-container h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.about-content {
+  color: #555;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  text-align: justify;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #007bff;
+}
+
+.about-content p {
+  margin: 0;
+}
+
+.about-content p:empty::before {
+  content: "No content yet";
+  color: #999;
+}
+
+.edit-icon {
+  margin-left: 15px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  transition: all 0.3s;
+  display: inline-block;
+}
+
+.edit-icon:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.edit-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.edit-textarea {
+  width: 100%;
+  height: 400px;
+  padding: 15px;
+  border: 2px solid #007bff;
+  background-color: #f0f8ff;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.edit-textarea:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 8px rgba(0, 86, 179, 0.3);
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.save-btn,
+.cancel-btn {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.save-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.save-btn:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.save-btn:active {
+  transform: translateY(0);
+}
+
+.cancel-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cancel-btn:active {
+  transform: translateY(0);
+}
+
+.error-message {
+  color: #d9534f;
+  padding: 15px;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.loading {
+  text-align: center;
+  color: #007bff;
+  font-size: 1.1rem;
+  padding: 20px;
+}
+
+
+.about-container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.about-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 16px;
+  text-align: justify;
+} */
+
+body{
+  background:#f6f8fb;
+}
+
+.about-container{
+  max-width:900px;
+  margin:60px auto;
+  padding:40px;
+  background:white;
+  border-radius:10px;
+}
+body {
+  background-color: #f5f5f5; /* change to any color you want */
+}
+
+.about-container {
+  background: transparent;
+}
+.about-container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+  min-height: 60vh;
+}
+
+.about-container h1 {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #222;
+}
+
+/* IMPORTANT: NO BOX LOOK */
+.about-content {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+}
+
+/* PARAGRAPHS */
+.about-content p {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+/* LISTS */
+.about-content ul {
+  margin: 12px 0 20px 22px;
+}
+
+.about-content li {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 8px;
+}
+
+/* HEADINGS */
+.about-content h2 {
+  font-size: 24px;
+  margin: 28px 0 12px;
+  color: #111;
+}
+
+.about-content h3 {
+  font-size: 20px;
+  margin: 24px 0 10px;
+  color: #222;
+}
+
+/* LINKS */
+.about-content a {
+  color: #2e7d32;
+  text-decoration: underline;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+  min-height: 60vh;
+}
+
+.about-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* THIS IS THE KEY */
+.about-text {
+  white-space: pre-wrap;   /* keeps line breaks exactly */
+  font-family: inherit;    /* normal font, not monospace */
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+}

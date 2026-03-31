@@ -1,0 +1,23 @@
+.kp-shipping { max-width: 920px; margin: 18px auto; padding: 0 12px; }
+.kp-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:12px; }
+.kp-header h2 { margin:0; font-size:20px; }
+.kp-add { background:#2e79e3; color:#fff; border:none; padding:8px 12px; border-radius:8px; cursor:pointer; }
+.kp-form-wrap { background:#fff; border:1px solid #ede6d9; padding:12px; border-radius:10px; margin-bottom:12px; }
+.kp-address-list { display:flex; flex-direction:column; gap:12px; }
+.kp-address-card { background:#fff7eb; border:1px solid #ede6d9; padding:12px; border-radius:10px; }
+.kp-address-card.default { border-color:#2e79e3; }
+.kp-address-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
+.kp-name { font-weight:700 }
+.kp-phone { color:#555 }
+.kp-street, .kp-city { color:#333; margin-bottom:4px }
+.kp-actions-row { display:flex; gap:8px; margin-top:8px }
+.kp-select { background:#4fbf8c; color:#fff; border:none; padding:8px 10px; border-radius:8px; cursor:pointer }
+.kp-edit { background:#fff; border:1px solid #2e79e3; color:#2e79e3; padding:8px 10px; border-radius:8px; cursor:pointer }
+.kp-delete { background:#fff; border:1px solid #e63946; color:#e63946; padding:8px 10px; border-radius:8px; cursor:pointer }
+.kp-empty { padding:16px; text-align:center; color:#666 }
+
+/* Simple responsive tweaks */
+@media (max-width: 768px) {
+  .kp-shipping { padding: 0 8px }
+  .kp-actions-row { flex-direction:column; }
+}

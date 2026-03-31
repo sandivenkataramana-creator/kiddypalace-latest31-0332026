@@ -1,0 +1,13 @@
+Row Number,Product Code,Reason,Details
+"10","'27084919530","duplicate product_code in file",
+"14","'78206020504","duplicate product_code in file",
+"26","'195166190792","Cannot add or update a child row: a foreign key constraint fails (`final_kdp`.`product_tags`, CONSTRAINT `product_tags_ibfk_2` FOREIGN KEY (`tag_id`) REFERENCES `tags` (`id`))",
+"28","'195166219387","product name mismatch","DB Name: ""Hasbro NERF Elite 2.0 Tetrad QS-4 4X"", File Name: ""Hasbro NERF Elite 2.0 Slyshot"""
+"31","'195166245973","product name mismatch","DB Name: ""Hasbro NERF Elite 2.0 Tetrad QS-4 4X"", File Name: ""Hasbro NERF Pro Gel Fire Ignitor"""
+"49","'630509875719","Cannot add or update a child row: a foreign key constraint fails (`final_kdp`.`product_tags`, CONSTRAINT `product_tags_ibfk_2` FOREIGN KEY (`tag_id`) REFERENCES `tags` (`id`))",
+"154","'4902778096055","Cannot add or update a child row: a foreign key constraint fails (`final_kdp`.`product_tags`, CONSTRAINT `product_tags_ibfk_2` FOREIGN KEY (`tag_id`) REFERENCES `tags` (`id`))",
+"502","'8901383511638","Cannot add or update a child row: a foreign key constraint fails (`final_kdp`.`product_tags`, CONSTRAINT `product_tags_ibfk_2` FOREIGN KEY (`tag_id`) REFERENCES `tags` (`id`))",
+"519","'8901383957009","Cannot add or update a child row: a foreign key constraint fails (`final_kdp`.`product_tags`, CONSTRAINT `product_tags_ibfk_2` FOREIGN KEY (`tag_id`) REFERENCES `tags` (`id`))",
+"544","'8901383992246","product name mismatch","DB Name: ""Funskool Giggles Animal Soft Ball"", File Name: ""FUNSKOOL GIGGLES ANIMAL SOFT BALL 6+ MONTHS"""
+"1545","'ZY0817B-2","Data too long for column 'brand_name' at row 1",
+"1549","'ZY-6608-3B","Data too long for column 'brand_name' at row 1",

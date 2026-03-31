@@ -1,0 +1,200 @@
+/* Address Form Styling */
+
+.address-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #1a1a1a;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #e74c8b;
+  box-shadow: 0 0 0 3px rgba(231, 76, 140, 0.1);
+}
+
+.form-group input.input-error,
+.form-group select.input-error {
+  border-color: #dc3545;
+  background: #fff5f5;
+}
+
+.form-group input.input-error:focus,
+.form-group select.input-error:focus {
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+}
+
+.error-text {
+  font-size: 0.85rem;
+  color: #dc3545;
+  margin-top: 2px;
+}
+
+/* Checkbox Group */
+.checkbox-group {
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: #f9f9f9;
+  border-radius: 6px;
+  border: 1px solid #e9e9e9;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #e74c8b;
+}
+
+.checkbox-label {
+  cursor: pointer;
+  user-select: none;
+  margin: 0;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e9e9e9;
+}
+
+.btn-submit,
+.btn-cancel {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-submit {
+  background: #e74c8b;
+  color: white;
+}
+
+.btn-submit:hover:not(:disabled) {
+  background: #d43c7d;
+  box-shadow: 0 2px 8px rgba(231, 76, 140, 0.25);
+}
+
+.btn-submit:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.btn-cancel {
+  background: #f0f0f0;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.btn-cancel:hover:not(:disabled) {
+  background: #e8e8e8;
+}
+
+.btn-cancel:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .btn-submit,
+  .btn-cancel {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .address-form {
+    gap: 16px;
+  }
+
+  .form-group label {
+    font-size: 0.85rem;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .checkbox-group {
+    padding: 12px;
+  }
+
+  .checkbox-group input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+  }
+
+  .checkbox-label {
+    font-size: 0.9rem;
+  }
+
+  .form-actions {
+    gap: 8px;
+    margin-top: 16px;
+    padding-top: 16px;
+  }
+
+  .btn-submit,
+  .btn-cancel {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+  }
+}

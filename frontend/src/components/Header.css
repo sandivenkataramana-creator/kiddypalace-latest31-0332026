@@ -1,0 +1,1487 @@
+/* 🌟 DIWALI SALE BAR */
+.top-announcement-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  background: #2e79e3;
+  color: #fff7eb;
+  padding: 8px 16px;
+  position: relative;
+  z-index: 1001;
+  box-shadow: 0 2px 6px rgba(39, 60, 46, 0.15);
+}
+
+.announcement-wrapper {
+  width: 55%;
+  overflow: hidden;
+  background: #2e79e3;
+  padding: 5px 0;
+  position: relative;
+}
+
+/* marquee scroll */
+.top-announcement-text {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 16px;
+  font-weight: bold;
+
+  /* start outside right and move left */
+  padding-left: 100%;
+animation: kpMarquee 8s linear infinite;
+
+}
+
+@keyframes kpMarquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+/* ============================
+   Mobile / Tablet header refinements (overrides only)
+   Improves spacing, alignment and touch targets without affecting desktop
+============================ */
+@media (max-width: 768px) {
+  /* Ensure navbar keeps consistent height and spacing */
+  .main-navbar {
+    padding: 8px 12px;
+    min-height: 56px;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* Left and right sections should not stretch — keep logo left, icons right */
+  .navbar-left {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-right {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+  }
+
+  /* Make hamburger and icons easier to tap and aligned */
+  .hamburger-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 8px;
+  }
+
+  .icon {
+    padding: 6px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Slightly smaller logo for tablets */
+  .logo-img {
+    height: 44px;
+  }
+
+  /* Keep top announcement compact and centered vertically */
+  .top-announcement-container {
+    padding: 6px 10px;
+    gap: 8px;
+    align-items: center;
+  }
+
+  /* Reduce width of auth-dropdown on tablet and center under the icon */
+  .auth-dropdown {
+    /* anchor under the profile icon on tablet (not fixed) */
+    position: absolute;
+    left: auto;
+    right: 0;
+    transform: none;
+    top: 46px;
+    min-width: 150px;
+    z-index: 1001;
+  }
+
+  /* mobile menu content should not overflow nor push content */
+  .mobile-menu-content {
+    width: 86%;
+    max-width: 360px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Tighter spacing on small screens */
+  .main-navbar {
+    padding: 6px 10px;
+    min-height: 52px;
+  }
+
+  .logo-img {
+    height: 38px;
+  }
+
+  .navbar-left {
+    flex: 0 0 auto;
+  }
+
+  .navbar-right {
+    margin-left: auto;
+    gap: 8px;
+  }
+
+  .hamburger-menu {
+    padding: 6px;
+  }
+
+  .icon {
+    padding: 6px;
+  }
+
+  /* Keep top announcement concise on very small screens */
+  .top-announcement-text {
+    font-size: 12px;
+    white-space: nowrap;
+    
+  }
+
+  /* Ensure auth dropdown centers under icon and buttons are touch-friendly */
+  .auth-dropdown {
+    /* use fixed positioning on very small screens so dropdown appears centered */
+    position: fixed;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    top: 56px;
+    min-width: 140px;
+    z-index: 2001;
+  }
+
+  .auth-dropdown button {
+    min-width: 120px;
+    padding: 8px 10px;
+    margin: 6px auto;
+  }
+}
+
+.top-contact {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.top-contact-link {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s;
+}
+
+.top-contact-link:hover {
+  opacity: 0.8;
+}
+
+.top-right-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.categories-panel {
+ max-height: 360px;     /* Limit full dropdown height */
+  overflow: hidden;      /* Do not expand beyond height */
+}
+
+.categories-wrapper {
+  position: relative;
+}
+
+.social-icons a {
+  color: #ffff;
+  font-size: 14px;
+  margin: 0 6px;
+  transition: color 0.2s ease;
+}
+
+.social-icons a:hover {
+  color: #e63946;
+}
+
+
+
+@keyframes glowText {
+  0% {
+    text-shadow: 0 0 5px rgba(255, 247, 235, 0.5),
+                 0 0 10px rgba(182, 158, 106, 0.3),
+                 0 0 15px rgba(182, 158, 106, 0.2);
+  }
+  50% {
+    text-shadow: 0 0 10px rgba(255, 247, 235, 0.8),
+                 0 0 20px rgba(182, 158, 106, 0.6),
+                 0 0 30px rgba(182, 158, 106, 0.4);
+  }
+  100% {
+    text-shadow: 0 0 6px rgba(255, 247, 235, 0.6),
+                 0 0 12px rgba(182, 158, 106, 0.4),
+                 0 0 20px rgba(182, 158, 106, 0.3);
+  }
+}
+
+/* 🌟 MAIN NAVBAR */
+.main-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white; 
+  color: #273c2e;
+  padding: 1px 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(39, 60, 46, 0.1);
+}
+
+/* 🌟 Logo */
+.logo-img {
+  height: 60px;
+  width: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+/* 🌟 Center Navigation List */
+.nav-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.nav-item a,
+.nav-item button {
+  color: #070707;
+  background: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: b;
+}
+
+.nav-item:hover a,
+.nav-item:hover button {
+  color:black;
+  transform: translateY(-1px);
+}
+
+/* 🌟 Dropdown Base Styles */
+.simple-dropdown,
+.categories-panel {
+  position: absolute;
+  /* top: 5px; */
+  left: 0;
+  background-color: white;
+  color: #273c2e;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(39, 60, 46, 0.2);
+  opacity: 0;
+  transform: translateY(-8px);
+  pointer-events: none;
+  transition: all 0.25s ease-in-out;
+  z-index: 999;
+}
+
+/* Hover-Bridge Fix (prevents flicker) */
+.nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: transparent;
+}
+
+.nav-item:hover > .simple-dropdown,
+.nav-item:hover > .categories-panel {
+  pointer-events: auto;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 🌟 Simple Dropdown (Age, Brand, Price) */
+.simple-dropdown {
+   list-style: none !important;   /* remove bullets */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 160px;
+ 
+}
+
+.simple-dropdown li {
+  padding: 8px 16px;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.simple-dropdown li:hover {
+   list-style: none !important;   /* extra safety */
+}
+
+/* 🌟 Categories Panel (Mega Dropdown) */
+.categories-panel {
+  display: flex;
+  padding: 20px;
+  min-width: 700px;
+  gap: 20px;
+  background-color:white;
+}
+
+/* Left: Categories */
+.panel-left {
+  width: 40%;
+  border-right: 1px solid #ede6d9;
+   max-height: 360px;   /* same as dropdown height */
+  overflow-y: auto;    /* enable scroll */
+  padding-right: 6px;
+}
+
+.panel-categories {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.panel-category {
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.panel-category:hover,
+.panel-category.active {
+  background-color: white;
+  color: black;
+}
+.panel-left::-webkit-scrollbar,
+.panel-right::-webkit-scrollbar {
+  width: 6px;
+}
+
+.panel-left::-webkit-scrollbar-thumb,
+.panel-right::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 6px;
+}
+
+.panel-left::-webkit-scrollbar-thumb:hover,
+.panel-right::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+
+
+/* Right: Subcategories */
+.panel-right {
+  width: 60%;
+  max-height: 360px;  /* same height */
+  overflow-y: auto;   /* scroll subcategories */
+  padding-right: 6px;
+}
+
+.subheading {
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: #b69e6a;
+}
+
+.panel-subcategories {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.panel-subcategories li {
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.panel-subcategories li:hover {
+  background-color:white;
+  color: black;
+  transform: translateX(4px);
+}
+/* ===========================
+   BRAND DROPDOWN — 2 COLUMNS
+=========================== */
+.brand-dropdown {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(120px, 1fr));
+  gap: 10px 14px;
+
+  min-width: 260px;
+  max-width: 300px;     /* fix width */
+  max-height: 260px;    /* fix height */
+  overflow-y: auto;     /* enable scroll */
+  overflow-x: hidden;   /* prevent sideways scroll */
+
+  padding: 12px 14px;
+  background: white;
+  border-radius: 8px;
+}
+
+.brand-dropdown::-webkit-scrollbar {
+  width: 10px;
+  height: 2px;
+  
+}
+
+.brand-dropdown::-webkit-scrollbar-track {
+  background: transparent;
+
+  /* Trick: reduce visible scroll area */
+  padding-top: 10px;
+  padding-bottom: 20px;
+  
+}
+
+.brand-dropdown::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-radius: 20px;
+  min-height: 10px !important;
+  height: 10px !important;
+}
+
+.brand-dropdown::-webkit-scrollbar-thumb:hover {
+  background: #9a9a9a;
+}
+
+
+.brand-dropdown li {
+  padding: 6px 10px;
+  font-size: 14px;
+  white-space: nowrap;  /* keep each brand in one line */
+}
+
+
+.empty {
+  color: #888;
+  font-size: 13px;
+}
+
+/* 🌟 Right Icons (Search, Profile, Cart) */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon {
+  cursor: pointer;
+  color: #273c2e;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.icon:hover {
+  color: black;
+  transform: scale(1.1);
+}
+
+/* Cart Badge */
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background-color:#E74C8B;
+  color:black;
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 2px 5px;
+  cursor: pointer;
+}
+
+/* 🌟 Mini Search Bar */
+.mini-search {
+  position: absolute;
+  top: 70px;
+  right: 90px;
+  background-color:white;
+  border-radius: 20px;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  animation: fadeIn 0.2s ease-in-out;
+  z-index: 1000;
+  box-shadow: 0px 4px 10px rgba(39, 60, 46, 0.15);
+}
+
+.mini-search input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #273c2e;
+  padding: 4px 8px;
+  width: 160px;
+}
+
+
+
+/* 🌟 Fade animation for search */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stores-dropdown {
+  position: absolute;
+  
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  background-color:white;
+  color: #273c2e;
+  border-radius: 6px;
+  box-shadow: 0 6px 15px white;
+  min-width: 270px;
+  padding: 8px 0;
+  z-index: 999;
+  animation: slideDown 0.2s ease-in-out;
+  border: 1px solid white;
+}
+
+.stores-dropdown a,
+.stores-dropdown button,
+.stores-dropdown li {
+  display: block;
+  /* width: 100%; */
+  /* padding: 8px 12px; */
+  color: #273c2e;
+  background: transparent;
+  border: none;
+  text-align: left;
+  font-size: 13px;
+  cursor: pointer;
+}
+.stores-dropdown-container {
+  position: relative;
+}
+
+.stores-dropdown a:hover,
+.stores-dropdown button:hover,
+.stores-dropdown li:hover {
+  background-color: #ede6d9;
+  color: #b69e6a;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================
+   👤 USER PROFILE DROPDOWN
+============================ */
+.auth-container {
+  position: relative;
+  display: inline-block;
+}
+
+.auth-container .icon {
+  cursor: pointer;
+  color: #273c2e;
+  transition: all 0.3s ease;
+}
+
+.auth-container .icon:hover {
+  /* color: #b69e6a; */
+  transform: scale(1.1);
+}
+
+.auth-dropdown {
+  position: absolute;
+  top: 38px;
+  right: 0;
+  background-color: #ffffff;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  padding: 12px;
+  width: 160px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.25s ease-in-out;
+  z-index: 999;
+}
+
+.auth-dropdown.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Greeting text */
+.user-greeting {
+  display: block;
+  font-size: 14px;
+  color: #222;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+/* Buttons inside dropdown */
+.auth-dropdown button {
+  display: block;
+  width: 100%;
+  padding: 8px 0;
+  margin-bottom: 6px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color:#2e79e3;
+  transition: background-color 0.2s ease;
+}
+
+/* Login Button */
+.login-btn {
+  background-color: red;
+  color: white;
+}
+
+.login-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Signup Button */
+.signup-btn {
+  background-color: #E74C8B;
+  color: white;
+}
+
+.signup-btn:hover {
+  background-color: #ede6d9;
+}
+
+/* Logout Button */
+.logout-btn {
+  background-color:#2e79e3;
+  color:white;
+}
+
+.logout-btn:hover {
+  background-color:#E74C8B ;
+}
+
+/* ============================
+   🔎 MINI SEARCH BOX
+============================ */
+.mini-search {
+  position: absolute;
+  top: 55px;
+  right: 80px;
+  background-color: #fff7eb;
+  border-radius: 8px;
+  padding: 6px 10px;
+  box-shadow: 0 2px 8px rgba(39, 60, 46, 0.15);
+  z-index: 999;
+}
+
+.mini-search input {
+  border: none;
+  outline: none;
+  width: 180px;
+  font-size: 14px;
+  color: #273c2e;
+}
+
+/* ============================
+   🛒 CART BADGE
+============================ */
+.cart-badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color:#e472b3;
+  color:black;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .stores-dropdown {
+    right: -20px;
+  }
+  .stores-dropdown-item {
+    font-size: 12px;
+  }
+}
+
+/* ============================
+   🏬 STORES DROPDOWN (Top Bar)
+============================ */
+.stores-dropdown-wrapper {
+  position: relative;
+}
+
+.stores-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  cursor: default;
+}
+ 
+.stores-dropdown-item:hover {
+  background-color:white;
+  color: black;
+ } 
+
+/* Optional: keep trigger inline with text on the bar */
+.top-announcement-container .stores-dropdown-wrapper {
+  margin-left: 4px;
+}
+
+.stores-dropdown-trigger {
+  background: none;
+  border: none;
+  border-radius: 4px;
+  color: #fff7eb;
+  padding: px 12px; 
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.stores-dropdown-trigger:hover {
+  background-color: rgba(255, 247, 235, 0.12);
+  border-color: rgba(255, 247, 235, 0.85);
+}
+
+
+.stores-dropdown {
+  position: absolute;
+  /* top: 100%; */
+  right: 0;
+  margin-top: 2px;
+  background-color: #F4AFC4;
+  color: #273c2e;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(39, 60, 46, 0.2);
+  min-width: 350px;
+  padding: 8px 0;
+  z-index: 1002;
+  animation: slideDown 0.2s ease-in-out;
+  border: 1px solid #ede6d9;
+} 
+
+
+.stores-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 1px;   /* Reduce this value to make them closer */
+}
+
+.location-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  height: 30px;
+  width: 30px;
+
+}
+
+.store-text {
+  margin-left: 0;   /* Remove extra gap */
+}
+/* ============================
+   📱 MOBILE MENU - HAMBURGER & DRAWER
+============================ */
+
+/* Hamburger Menu Icon - Hidden on Desktop */
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  color: #273c2e;
+  transition: all 0.3s ease;
+  padding: 8px;
+  border-radius: 8px;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1002;
+}
+
+.hamburger-menu:hover {
+  background: #f4f0e8;
+  color: #b69e6a;
+}
+
+/* Mobile Menu Drawer */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.mobile-menu-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 85%;
+  max-width: 320px;
+  height: 100vh;
+  background: #fff7eb;
+  box-shadow: 2px 0 12px rgba(39, 60, 46, 0.2);
+  overflow-y: auto;
+  animation: slideInLeft 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+.mobile-nav-list {
+  list-style: none;
+  padding: 15px 0;
+  margin: 0;
+  flex: 1;
+  text-align: left;
+}
+
+.mobile-nav-item {
+  padding: 14px 16px;
+  font-size: 15px;
+  color: #273c2e;
+  cursor: pointer;
+  border-bottom: 1px solid #ede6d9;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  text-align: left;
+}
+
+.mobile-nav-item:hover {
+  background: #f4f0e8;
+  color: #b69e6a;
+  padding-left: 20px;
+}
+
+.mobile-accordion-item {
+  border-bottom: 1px solid #ede6d9;
+}
+
+.mobile-accordion-header {
+  padding: 14px 16px;
+  font-size: 15px;
+  color: #273c2e;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.mobile-accordion-header:hover {
+  background: #f4f0e8;
+  color: #b69e6a;
+  padding-left: 20px;
+}
+
+.mobile-sub-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #fdfaf6;
+  border-top: 1px solid #ede6d9;
+}
+
+.mobile-sub-menu li {
+  padding: 12px 16px 12px 30px;
+  font-size: 14px;
+  color: #555;
+  cursor: pointer;
+  border-bottom: 1px solid #f0eadd;
+  text-align: left;
+}
+
+.mobile-sub-menu li:last-child {
+  border-bottom: none;
+}
+
+.mobile-sub-menu li:hover {
+  color: #b69e6a;
+  background: #fff;
+  padding-left: 34px;
+}
+
+.mobile-sub-menu .view-all-sub {
+  font-weight: 600;
+  color: #2e79e3;
+}
+
+.mobile-menu-divider {
+  height: 1px;
+  background: #ede6d9;
+  margin: 12px 0;
+}
+
+.mobile-auth-section {
+  padding: 12px 16px;
+  border-top: 1px solid #ede6d9;
+}
+
+.mobile-user-greeting {
+  font-size: 12px;
+  color: #b69e6a;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.mobile-auth-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.3px;
+}
+
+.mobile-auth-btn.login-btn {
+  background: #2e79e3;
+  color: white;
+}
+
+.mobile-auth-btn.login-btn:active {
+  opacity: 0.8;
+}
+
+.mobile-auth-btn.signup-btn {
+  background: #E74C8B;
+  color: white;
+}
+
+.mobile-auth-btn.signup-btn:active {
+  opacity: 0.8;
+}
+
+.mobile-auth-btn.orders-btn {
+  background: #2e79e3;
+  color: white;
+}
+
+.mobile-auth-btn.orders-btn:active {
+  opacity: 0.8;
+}
+
+.mobile-auth-btn.logout-btn {
+  background: #E74C8B;
+  color: white;
+  border: none;
+}
+
+.mobile-auth-btn.logout-btn:active {
+  opacity: 0.8;
+}
+
+/* ============================
+   📱 MOBILE RESPONSIVENESS - HEADER
+============================ */
+@media (max-width: 768px) {
+  /* Show Hamburger Menu */
+  .hamburger-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Hide nav-center on tablet/mobile */
+  .nav-center {
+    display: none !important;
+  }
+
+  /* Top Announcement Bar - Clean and Neat */
+  .top-announcement-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 8px 12px;
+    flex-wrap: nowrap;
+    background: #2e79e3;
+  }
+
+  .top-announcement-text {
+    flex: 1 1 auto;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+  }
+
+  .top-contact {
+    flex: 0 0 auto;
+    font-size: 12px;
+    margin-right: 0;
+    display: block;
+  }
+
+  .top-right-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 0 0 auto;
+  }
+
+  .social-icons a {
+    font-size: 12px;
+    margin: 0 4px;
+  }
+
+  /* Main Navbar - Clean Layout */
+  .main-navbar {
+    padding: 10px 12px;
+    flex-wrap: nowrap;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .logo-img {
+    height: 48px;
+    flex: 0 0 auto;
+  }
+
+  /* Center Navigation */
+  .nav-center {
+    order: 3;
+    width: 100%;
+    flex-basis: 100%;
+    margin-top: 6px;
+  }
+
+  .nav-list {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .nav-item {
+    font-size: 11px;
+  }
+
+  .nav-item a,
+  .nav-item button {
+    font-size: 11px;
+    padding: 2px 4px;
+  }
+
+  /* Dropdowns */
+  .simple-dropdown {
+    min-width: 130px;
+    font-size: 11px;
+  }
+
+  .simple-dropdown li {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+
+  .categories-panel {
+    display: none;
+  }
+
+  /* Right Icons */
+  .navbar-right {
+    gap: 10px;
+    order: 2;
+    flex: 0 0 auto;
+  }
+
+  .icon {
+    font-size: 16px;
+  }
+
+  .cart-badge {
+    font-size: 9px;
+    padding: 1px 3px;
+    top: -4px;
+    right: -6px;
+  }
+
+  /* Mini Search */
+  .mini-search {
+    top: 48px;
+    right: 45px;
+    padding: 3px 6px;
+    border-radius: 6px;
+  }
+
+  .mini-search input {
+    width: 100px;
+    font-size: 11px;
+    padding: 2px 4px;
+  }
+
+  /* Auth Dropdown */
+  .auth-dropdown {
+    /* anchor under profile icon on tablet (not fixed) */
+    position: absolute;
+    left: auto;
+    right: 0;
+    transform: none;
+    width: 140px;
+    padding: 8px;
+    top: 36px;
+    z-index: 1001;
+  }
+
+  .user-greeting {
+    font-size: 11px;
+    margin-bottom: 4px;
+  }
+
+  .auth-dropdown button {
+    padding: 6px 8px;
+    font-size: 12px;
+    margin: 6px auto;
+    min-width: 120px;
+    display: block;
+    text-align: center;
+  }
+
+  /* Stores Dropdown */
+  .stores-dropdown {
+    min-width: 180px;
+    padding: 4px 0;
+    right: -15px;
+  }
+
+  .stores-dropdown a,
+  .stores-dropdown button,
+  .stores-dropdown li {
+    padding: 5px 8px;
+    font-size: 11px;
+  }
+
+  .stores-dropdown-item {
+    padding: 5px 8px;
+  }
+
+  .dropdown-arrow {
+    margin-left: 2px;
+    font-size: 10px;
+  }
+
+  .sub-arrow {
+    margin-left: 2px;
+    font-size: 10px;
+  }
+
+  /* Reorder icons on tablet - Search first, Profile second, Cart third, Hamburger last */
+  .navbar-right {
+    gap: 8px !important;
+    justify-content: flex-start !important;
+  }
+
+  .hamburger-menu {
+    order: 999 !important;
+    margin-left: auto !important;
+  }
+
+  .search-icon {
+    order: 1 !important;
+  }
+
+  .auth-container {
+    order: 2 !important;
+  }
+
+  .cart-icon-wrapper {
+    order: 3 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Show Hamburger Menu */
+  .hamburger-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Hide nav-center on mobile */
+  .nav-center {
+    display: none !important;
+  }
+
+  /* Top Announcement Bar - Clean Display */
+  .top-announcement-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 8px 10px;
+    flex-wrap: wrap;
+    background: #2e79e3;
+  }
+
+  .announcement-wrapper {
+    width: 100%;
+    order: 3;
+    padding: 2px 0;
+  }
+
+  .top-announcement-text {
+    font-size: 11px;
+    white-space: nowrap;
+    margin: 0;
+  }
+
+  .top-contact {
+    font-size: 11px;
+    display: block;
+    order: 1;
+  }
+
+  .top-right-section {
+    gap: 8px;
+    display: flex;
+    align-items: center;
+    order: 2;
+  }
+
+  .social-icons a {
+    font-size: 11px;
+    margin: 0 4px;
+  }
+
+  /* Main Navbar - Cleaner Layout */
+  .main-navbar {
+    padding: 8px 10px;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .logo-img {
+    height: 40px;
+    flex: 0 0 auto;
+  }
+
+  /* Navigation */
+  .nav-list {
+    gap: 8px;
+  }
+
+  .nav-item {
+    font-size: 11px;
+  }
+
+  .nav-item a,
+  .nav-item button {
+    font-size: 11px;
+    padding: 2px 4px;
+  }
+
+  /* Right Section */
+  .navbar-right {
+    gap: 12px;
+    display: flex;
+    align-items: center;
+  }
+
+  .icon {
+    font-size: 16px;
+  }
+
+  .cart-badge {
+    font-size: 9px;
+    padding: 1px 3px;
+  }
+
+  .mini-search {
+    right: 40px;
+    top: 44px;
+    padding: 4px 6px;
+  }
+
+  .mini-search input {
+    width: 100px;
+    font-size: 11px;
+    padding: 2px 4px;
+  }
+
+  .auth-dropdown {
+    /* anchor under profile icon on small screens (not fixed) */
+    position: absolute;
+    left: auto;
+    right: 0;
+    transform: none;
+    top: 36px;
+    width: 140px;
+    padding: 8px;
+    z-index: 1001;
+  }
+
+  .user-greeting {
+    font-size: 11px;
+    margin-bottom: 4px;
+  }
+
+  .auth-dropdown button {
+    padding: 7px 8px;
+    font-size: 12px;
+    margin: 6px auto;
+    min-width: 120px;
+    display: block;
+    text-align: center;
+  }
+
+  .stores-dropdown {
+    min-width: 160px;
+    padding: 4px 0;
+  }
+
+  .stores-dropdown a,
+  .stores-dropdown button,
+  .stores-dropdown li {
+    padding: 6px 8px;
+    font-size: 11px;
+  }
+
+  /* Reorder icons on mobile - Search first, Profile second, Cart third, Hamburger last */
+  .navbar-right {
+    gap: 6px !important;
+    justify-content: flex-start !important;
+  }
+
+  .hamburger-menu {
+    order: 999 !important;
+    margin-left: auto !important;
+  }
+
+  .search-icon {
+    order: 1 !important;
+  }
+
+  .auth-container {
+    order: 2 !important;
+  }
+
+  .cart-icon-wrapper {
+    order: 3 !important;
+  }
+}
+
+
+
+
+
+
+
+/* --- Sticky Header --- */
+.header {
+  position: sticky;        /* Stays fixed within scroll container */
+  top: 0;                  /* Stick to top of page */
+  z-index: 1000;           /* Make sure it stays above all other elements */
+  background-color: #fff7eb;  /* Same as your site background for seamless look */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* subtle shadow on scroll */
+}
+
+/* Small dropdown arrow styles */
+.dropdown-arrow {
+  margin-left: 5px;
+  vertical-align: middle;
+  transition: transform 0.25s ease;
+  display: inline-block;
+  position: relative;
+  top: -1px;
+}
+
+.dropdown-arrow.rotate {
+  transform: rotate(180deg);
+}
+
+/* Small right arrows for subcategories */
+.sub-arrow {
+  margin-left: 6px;
+  vertical-align: middle;
+  opacity: 0.7;
+  transition: transform 0.2s ease;
+  position: relative;
+  top: -1px;
+}
+
+.panel-category:hover .sub-arrow,
+.panel-subcategories li:hover .sub-arrow {
+  transform: translateX(3px);
+  opacity: 1;
+}

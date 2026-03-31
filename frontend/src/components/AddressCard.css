@@ -1,0 +1,218 @@
+/* Address Card Styling - Amazon-like Design */
+
+.address-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.address-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: #bbb;
+}
+
+.address-card.default {
+  border: 2px solid #e74c8b;
+  background: #fff9fb;
+}
+
+/* Default Badge */
+.default-badge {
+  position: absolute;
+  top: -12px;
+  left: 16px;
+  background: #e74c8b;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Address Content */
+.address-content {
+  flex-grow: 1;
+  padding-top: 8px;
+}
+
+.address-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 12px 0;
+}
+
+.address-info {
+  margin-bottom: 12px;
+}
+
+.address-line {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.address-contact {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+}
+
+.address-contact p {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 6px 0;
+}
+
+.address-contact strong {
+  color: #333;
+  font-weight: 600;
+}
+
+/* Address Actions */
+.address-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+}
+
+.btn-action {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-default {
+  background: #f0f0f0;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.btn-default:hover {
+  background: #e74c8b;
+  color: white;
+  border-color: #e74c8b;
+}
+
+.btn-edit {
+  background: #2e79e3;
+  color: white;
+}
+
+.btn-edit:hover {
+  background: #1e5aa8;
+  box-shadow: 0 2px 6px rgba(46, 121, 227, 0.25);
+}
+
+.btn-delete {
+  background: #f8f8f8;
+  color: #dc3545;
+  border: 1px solid #ddd;
+}
+
+.btn-delete:hover {
+  background: #dc3545;
+  color: white;
+  border-color: #dc3545;
+}
+
+.btn-action:active {
+  transform: scale(0.96);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .address-card {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .default-badge {
+    left: 12px;
+    top: -10px;
+    font-size: 0.7rem;
+    padding: 3px 10px;
+  }
+
+  .address-name {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .address-line {
+    font-size: 0.85rem;
+  }
+
+  .address-contact p {
+    font-size: 0.8rem;
+  }
+
+  .address-actions {
+    gap: 6px;
+  }
+
+  .btn-action {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .address-card {
+    padding: 14px;
+    gap: 10px;
+  }
+
+  .default-badge {
+    left: 10px;
+    top: -8px;
+    font-size: 0.65rem;
+    padding: 2px 8px;
+  }
+
+  .address-name {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+  }
+
+  .address-line {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .address-contact p {
+    font-size: 0.75rem;
+    margin: 4px 0;
+  }
+
+  .address-actions {
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 8px;
+  }
+
+  .btn-action {
+    width: 100%;
+    padding: 12px;
+    font-size: 0.9rem;
+    text-align: center;
+    font-weight: 700;
+  }
+}

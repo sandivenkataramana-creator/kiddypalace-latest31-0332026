@@ -1,0 +1,236 @@
+/* ✅ Modern Shipping Address Form */
+.kp-address-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 16px;
+  border: 1px solid #e8e0d5;
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.kp-row {
+  display: flex;
+  gap: 16px;
+}
+
+.kp-row input,
+.kp-row select {
+  flex: 1;
+  padding: 12px 14px;
+  border: 2px solid #e8e0d5;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  background: #fafaf8;
+}
+
+.kp-row input:focus,
+.kp-row select:focus {
+  outline: none;
+  border-color: #e74c8b;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(231, 76, 139, 0.15);
+  transform: translateY(-2px);
+}
+
+.kp-row input::placeholder {
+  color: #999;
+  font-weight: 500;
+}
+
+.kp-address-form input,
+.kp-address-form select,
+.kp-address-form textarea {
+  padding: 12px 14px;
+  border: 2px solid #e8e0d5;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  background: #fafaf8;
+}
+
+.kp-address-form input:focus,
+.kp-address-form select:focus,
+.kp-address-form textarea:focus {
+  outline: none;
+  border-color: #e74c8b;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(231, 76, 139, 0.15);
+}
+
+.kp-address-form input::placeholder,
+.kp-address-form textarea::placeholder {
+  color: #999;
+  font-weight: 500;
+}
+
+.kp-address-form textarea {
+  min-height: 80px;
+  resize: vertical;
+  padding: 12px 14px;
+}
+
+.kp-default {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.kp-default input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #e74c8b;
+}
+
+.kp-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+  justify-content: flex-end;
+}
+
+.kp-save {
+  background: linear-gradient(135deg, #e74c8b 0%, #d93d7a 100%);
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(231, 76, 139, 0.3);
+  letter-spacing: 0.5px;
+}
+
+.kp-save:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(231, 76, 139, 0.4);
+  background: linear-gradient(135deg, #d93d7a 0%, #c92d6a 100%);
+}
+
+.kp-save:active {
+  transform: translateY(0);
+}
+
+.kp-cancel {
+  background: #ffffff;
+  color: #555;
+  border: 2px solid #e8e0d5;
+  padding: 10px 24px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.kp-cancel:hover {
+  background: #f9f9f9;
+  border-color: #999;
+  color: #333;
+}
+
+.kp-cancel:active {
+  transform: scale(0.98);
+}
+
+/* Desktop View */
+@media (min-width: 1200px) {
+  .kp-address-form {
+    padding: 32px;
+    gap: 18px;
+  }
+
+  .kp-row {
+    gap: 18px;
+  }
+
+  .kp-row input,
+  .kp-row select {
+    padding: 13px 16px;
+    font-size: 0.96rem;
+  }
+}
+
+/* Tablet View */
+@media (max-width: 768px) {
+  .kp-address-form {
+    padding: 20px;
+    gap: 12px;
+  }
+
+  .kp-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .kp-row input,
+  .kp-row select {
+    padding: 11px 12px;
+    font-size: 0.93rem;
+  }
+
+  .kp-actions {
+    flex-direction: row;
+    gap: 10px;
+    justify-content: stretch;
+  }
+
+  .kp-save,
+  .kp-cancel {
+    flex: 1;
+    padding: 11px 16px;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 480px) {
+  .kp-address-form {
+    padding: 16px;
+    gap: 10px;
+  }
+
+  .kp-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .kp-row input,
+  .kp-row select {
+    padding: 10px 10px;
+    font-size: 0.9rem;
+  }
+
+  .kp-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .kp-save,
+  .kp-cancel {
+    width: 100%;
+    padding: 11px 14px;
+    font-size: 0.9rem;
+  }
+}
