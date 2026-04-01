@@ -38,11 +38,13 @@ const Footer = () => {
 </li>
 
             {/* <li><a href="#trending">Trending Products  </a></li> */}
-<li
-  style={{ cursor: "pointer" }}
-  onClick={() => navigate('/products?discount=high')}
->
-  Trending Products
+<li>
+  <a
+    style={{ cursor: "pointer" }}
+    onClick={() => navigate('/products?discount=high')}
+  >
+    Trending Products
+  </a>
 </li>
 
 
