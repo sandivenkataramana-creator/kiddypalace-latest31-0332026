@@ -312,7 +312,7 @@ const toggleStoresDropdown = () => {
         {/* 📞 Phone Number on the Left */}
         <div className="top-contact">
           <a href="tel:+917075004435" className="top-contact-link">
-            <Phone size={24} style={{ marginRight: '8px', color: '#ff4d4d' }} />
+            <Phone size={13} style={{ marginRight: '6px', color: '#ff4d4d' }} />
             +91 70750 04435
           </a>
         </div>
@@ -460,7 +460,7 @@ const toggleStoresDropdown = () => {
   onMouseLeave={() => setShowStoresDropdown(false)}  // 👈 close on leave
 >
   <button className="stores-dropdown-trigger">
-    <Home size={24} style={{ marginRight: '6px' }} />
+    <Home size={16} style={{ marginRight: '6px' }} />
     Our Stores
   </button>
 
@@ -522,14 +522,6 @@ const toggleStoresDropdown = () => {
       <div className="main-navbar">
         {/* Logo */}
         <div className="navbar-left">
-          {/* Hamburger Menu - Mobile Only */}
-          <div className="hamburger-menu" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} style={{ marginRight: '32px' }}>
-            {mobileMenuOpen ? (
-              <X size={40} />
-            ) : (
-              <Menu size={40} />
-            )}
-          </div>
           <a href="/"><img src={logo} alt="KP Logo" className="logo-img" /></a>
         </div>
 
@@ -721,10 +713,18 @@ const toggleStoresDropdown = () => {
 
         {/* Right Icons */}
         <div className="navbar-right">
+          {/* Hamburger Menu - Mobile Only */}
+          <div className="hamburger-menu" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+            {mobileMenuOpen ? (
+              <X size={24} />
+            ) : (
+              <Menu size={24} />
+            )}
+          </div>
 
           {/* Search Icon */}
           <div className="icon search-icon" onClick={() => setSearchOpen((prev) => !prev)}>
-            <Search size={36} />
+            <Search size={22} />
           </div>
 
           {searchOpen && (
@@ -770,7 +770,7 @@ const toggleStoresDropdown = () => {
               className="icon"
               onClick={() => setShowAuthDropdown(!showAuthDropdown)}
             >
-              <User size={36} />
+              <User size={22} />
             </div>
 
             {/* Dropdown Menu */}
@@ -814,7 +814,7 @@ const toggleStoresDropdown = () => {
             style={{ cursor: 'pointer', position: 'relative', marginRight: '20px' }}
           > 
             <div className="cart-icon">
-              <ShoppingCart size={36} color="BLACK" />
+              <ShoppingCart size={22} color="BLACK" />
             </div>
             {getCartCount() > 0 && <span className="cart-badge">{getCartCount()}</span>}
           </div>

@@ -18,10 +18,10 @@
 
 /* Headings */
 .footer-section h3 {
-  font-size: 1.15rem; /* Increased for HD impact */
+  font-size: 15px;
   font-weight: 600;
-  margin-bottom: 0.5rem;
-  padding-bottom: 0.25rem;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
   position: relative;
   display: inline-block;
 }
@@ -54,7 +54,7 @@
 .footer-section ul li a {
   color: white;
   text-decoration: none;
-  font-size: 0.9375rem; /* ~15px base */
+  font-size: 15px;
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
@@ -162,30 +162,27 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .footer {
-    text-align: left;
-    padding: 20px 15px;
+    text-align: center;
+    padding: 12px 10px;
   }
 
   .footer-content {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px 15px;
-    padding-top: 10px;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding-top: 12px;
     margin-bottom: 15px;
   }
 
-
-
   .footer-section h3 {
-    font-size: 1rem; /* Slightly larger on tablet for better view */
-    margin-bottom: 0.5rem;
+    font-size: 13px;
+    margin-bottom: 8px;
     font-weight: 600;
   }
 
   .footer-section h3::after {
-    width: 40px;
-    left: 0;
+    width: 100%;
   }
 
   .footer-section ul li {
@@ -193,17 +190,16 @@
   }
 
   .footer-section ul li a {
-    font-size: 0.9rem; /* Scales with fluid base */
+    font-size: 12px;
     transition: all 0.2s ease;
   }
 
   .footer-section ul li a:hover {
-    color: #fff;
-    opacity: 0.8;
+    color: #b69e6a;
   }
 
   .contact-list li a {
-    font-size: 0.875rem;
+    font-size: 12px;
   }
 
   .social-links {
@@ -223,9 +219,9 @@
 
   .footer-bottom {
     flex-direction: column;
-    gap: 0.625rem;
-    padding: 0.75rem 0.5rem;
-    font-size: 0.875rem;
+    gap: 10px;
+    padding: 12px 8px;
+    font-size: 12px;
   }
 
   .payment-methods {
@@ -236,37 +232,34 @@
   }
 
   .payment-methods span {
-    font-size: 0.75rem;
+    font-size: 11px;
   }
 
   .payment-icon {
-    font-size: 1.25rem;
+    font-size: 20px;
   }
 }
 
 @media (max-width: 480px) {
   .footer {
-    padding: 15px 12px;
-    text-align: left;
+    padding: 10px 8px;
   }
 
   .footer-content {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px 10px;
+    grid-template-columns: 1fr;
+    gap: 15px;
     padding-top: 10px;
     margin-bottom: 12px;
   }
 
-
   .footer-section h3 {
-    font-size: 13px;
-    margin-bottom: 8px;
-    font-weight: 700;
+    font-size: 12px;
+    margin-bottom: 6px;
+    font-weight: 600;
   }
 
   .footer-section h3::after {
-    width: 30px;
-    left: 0;
+    width: 100%;
   }
 
   .footer-section ul {
@@ -279,7 +272,7 @@
   }
 
   .footer-section ul li a {
-    font-size: 0.8125rem;
+    font-size: 11px;
   }
 
   .contact-list {
@@ -328,6 +321,6 @@
   }
 
   .payment-icon {
-    font-size: 1.25rem;
+    font-size: 20px;
   }
 }
