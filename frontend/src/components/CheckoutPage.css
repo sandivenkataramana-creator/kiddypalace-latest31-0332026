@@ -1174,7 +1174,7 @@
 /* ============================
    📱 MOBILE RESPONSIVENESS - CHECKOUT PAGE
 ============================ */
-@media (max-width: 1024px) {
+@media (max-width: 968px) {
   .checkout-content {
     padding: 20px 15px;
   }

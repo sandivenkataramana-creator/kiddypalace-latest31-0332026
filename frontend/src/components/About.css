@@ -262,25 +262,3 @@ body {
   line-height: 1.8;
   color: #333;
 }
-
-@media (max-width: 480px) {
-  .about-container {
-    margin: 30px auto;
-    padding: 0 15px;
-  }
-
-  .about-title {
-    font-size: 24px;
-    margin-bottom: 15px;
-  }
-
-  .about-text {
-    font-size: 15px;
-    line-height: 1.6;
-  }
-
-  .about-content h2 {
-    font-size: 20px;
-    margin: 20px 0 10px;
-  }
-}

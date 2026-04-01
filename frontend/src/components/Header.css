@@ -1,60 +1,31 @@
+/* 🌟 DIWALI SALE BAR */
 .top-announcement-container {
-  display: grid;
-  grid-template-columns: 180px 1fr 180px; /* Rigid safe-zones */
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  gap: 12px;
   background: #2e79e3;
   color: #fff7eb;
-  padding: 0.75rem 1.5rem;
+  padding: 8px 16px;
   position: relative;
   z-index: 1001;
-  box-shadow: 0 4px 12px rgba(39, 60, 46, 0.2);
-}
-
-.top-contact {
-  justify-self: start;
-  z-index: 10;
-  position: relative;
-  background: #2e79e3; /* Masks marquee behind it */
-  padding-right: 15px; 
-}
-
-.top-right-section {
-  justify-self: end;
-  z-index: 10;
-  position: relative;
-  background: #2e79e3; /* Masks marquee behind it */
-  padding-left: 15px;
-}
-
-.top-contact, .top-right-section {
-  flex: 0 0 auto;  /* Don't let side items shrink or overlap */
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
-}
-
-.top-right-section {
-  justify-content: flex-end;
-  gap: 1.5rem;
+  box-shadow: 0 2px 6px rgba(39, 60, 46, 0.15);
 }
 
 .announcement-wrapper {
-  grid-column: 1 / span 3; /* Stretch behind side items */
-  grid-row: 1;
+  width: 55%;
   overflow: hidden;
+  background: #2e79e3;
+  padding: 5px 0;
   position: relative;
-  text-align: center;
-  min-width: 0;   
-  z-index: 1; 
 }
 
 /* marquee scroll */
 .top-announcement-text {
   display: inline-block;
   white-space: nowrap;
-  font-size: 1.25rem; /* Larger base font for HD */
-  font-weight: 800;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  font-size: 16px;
+  font-weight: bold;
 
   /* start outside right and move left */
   padding-left: 100%;
@@ -76,13 +47,13 @@ animation: kpMarquee 8s linear infinite;
    Mobile / Tablet header refinements (overrides only)
    Improves spacing, alignment and touch targets without affecting desktop
 ============================ */
-@media (max-width: 1024px) {
-  /* Elite Tablet Scale (iPad Air 820px coverage) */
+@media (max-width: 768px) {
+  /* Ensure navbar keeps consistent height and spacing */
   .main-navbar {
-    padding: 20px 30px !important;
-    min-height: 110px !important;
+    padding: 8px 12px;
+    min-height: 56px;
     align-items: center;
-    gap: 25px !important;
+    gap: 8px;
   }
 
   /* Left and right sections should not stretch — keep logo left, icons right */
@@ -96,7 +67,7 @@ animation: kpMarquee 8s linear infinite;
     flex: 0 0 auto;
     display: flex;
     align-items: center;
-    gap: 1.25rem;
+    gap: 10px;
     margin-left: auto;
   }
 
@@ -110,45 +81,23 @@ animation: kpMarquee 8s linear infinite;
   }
 
   .icon {
-    padding: 15px !important;
-    border-radius: 50% !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    background: rgba(39, 60, 46, 0.05);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    padding: 6px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .icon:hover {
-    background: rgba(39, 60, 46, 0.12) !important;
-    transform: scale(1.15) !important;
-  }
-
-  /* Massive Elite Logo for Brand Authority */
+  /* Slightly smaller logo for tablets */
   .logo-img {
-    height: 100px !important; 
-    width: auto !important;
-    object-fit: contain !important;
-    transition: transform 0.4s ease;
+    height: 44px;
   }
 
-  /* Elite Top Bar with High-End Fade Mask */
+  /* Keep top announcement compact and centered vertically */
   .top-announcement-container {
-    grid-template-columns: 200px 1fr 200px !important; 
-    padding: 15px 25px !important;
-    min-height: 60px !important;
-  }
-
-  .announcement-wrapper {
-    /* Removed gradient mask to ensure 100% text clarity in center */
-    mask-image: none !important;
-    -webkit-mask-image: none !important;
-  }
-
-  .top-announcement-text {
-    font-size: 1.25rem !important; /* Slightly dialed back for better fit */
-    font-weight: 800 !important;
-    letter-spacing: 0.2px;
+    padding: 6px 10px;
+    gap: 8px;
+    align-items: center;
   }
 
   /* Reduce width of auth-dropdown on tablet and center under the icon */
@@ -168,27 +117,6 @@ animation: kpMarquee 8s linear infinite;
     width: 86%;
     max-width: 360px;
   }
-
-  /* Bring back and scale Social Icons for Elite view */
-  .social-icons {
-    display: flex !important;
-    gap: 1.25rem;
-  }
-
-  .social-icons a {
-    font-size: 1.5rem !important; /* Massive Elite social icons */
-  }
-
-  .top-right-section {
-    gap: 1.5rem !important;
-    font-size: 1.4rem !important; /* Matching font-size */
-    font-weight: 700 !important;
-  }
-
-  .top-contact {
-    font-size: 1.4rem !important; /* Matching font-size */
-    font-weight: 700 !important;
-  }
 }
 
 @media (max-width: 480px) {
@@ -199,7 +127,7 @@ animation: kpMarquee 8s linear infinite;
   }
 
   .logo-img {
-    height: 48px; /* Improved brand presence on small phones */
+    height: 38px;
   }
 
   .navbar-left {
@@ -221,8 +149,9 @@ animation: kpMarquee 8s linear infinite;
 
   /* Keep top announcement concise on very small screens */
   .top-announcement-text {
-    font-size: 0.75rem;
+    font-size: 12px;
     white-space: nowrap;
+    
   }
 
   /* Ensure auth dropdown centers under icon and buttons are touch-friendly */
@@ -245,9 +174,8 @@ animation: kpMarquee 8s linear infinite;
 }
 
 .top-contact {
-  font-weight: 700;
+  font-weight: 600;
   white-space: nowrap;
-  font-size: 1.4rem; /* Elite Base Font for Phone */
 }
 
 .top-contact-link {
@@ -320,13 +248,6 @@ animation: kpMarquee 8s linear infinite;
   top: 0;
   z-index: 1000;
   box-shadow: 0 4px 10px rgba(39, 60, 46, 0.1);
-}
-
-/* 🌟 Navbar Left */
-.navbar-left {
-  display: flex;
-  align-items: center;
-  gap: 12px;
 }
 
 /* 🌟 Logo */
@@ -810,8 +731,8 @@ animation: kpMarquee 8s linear infinite;
 .mini-search input {
   border: none;
   outline: none;
-  width: 11.25rem;
-  font-size: 0.875rem;
+  width: 180px;
+  font-size: 14px;
   color: #273c2e;
 }
 
@@ -824,7 +745,7 @@ animation: kpMarquee 8s linear infinite;
   right: -10px;
   background-color:#e472b3;
   color:black;
-  font-size: 0.75rem;
+  font-size: 12px;
   padding: 2px 6px;
   border-radius: 50%;
   cursor: pointer;
@@ -835,7 +756,7 @@ animation: kpMarquee 8s linear infinite;
     right: -20px;
   }
   .stores-dropdown-item {
-    font-size: 0.75rem;
+    font-size: 12px;
   }
 }
 
@@ -870,7 +791,7 @@ animation: kpMarquee 8s linear infinite;
   border-radius: 4px;
   color: #fff7eb;
   padding: px 12px; 
-  font-size: 0.8125rem;
+  font-size: 13px;
   font-weight: 600;
   cursor: pointer;
   display: flex;
@@ -911,7 +832,7 @@ animation: kpMarquee 8s linear infinite;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3.125rem;
+  font-size: 50px;
   height: 30px;
   width: 30px;
 
@@ -984,7 +905,7 @@ animation: kpMarquee 8s linear infinite;
 
 .mobile-nav-list {
   list-style: none;
-  padding: 85px 0 20px 0; /* Clear sticky header */
+  padding: 15px 0;
   margin: 0;
   flex: 1;
   text-align: left;
@@ -1131,9 +1052,9 @@ animation: kpMarquee 8s linear infinite;
 }
 
 /* ============================
-   📱 MOBILE & TABLET RESPONSIVENESS - HEADER
+   📱 MOBILE RESPONSIVENESS - HEADER
 ============================ */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   /* Show Hamburger Menu */
   .hamburger-menu {
     display: flex;
@@ -1159,8 +1080,8 @@ animation: kpMarquee 8s linear infinite;
 
   .top-announcement-text {
     flex: 1 1 auto;
-    font-size: 11px;
-    letter-spacing: 0.2px;
+    font-size: 12px;
+    letter-spacing: 0.3px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

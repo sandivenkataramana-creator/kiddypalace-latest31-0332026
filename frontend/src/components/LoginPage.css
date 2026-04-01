@@ -39,8 +39,8 @@
 }
 
 .login-header h2 {
-  margin: 0 0 0.5rem;
-  font-size: 2rem; /* Will be overridden by fluid h2 in index.css if not careful, but rem is safe */
+  margin: 0 0 0.35rem;
+  font-size: 2rem;
 }
 
 .login-header p {
@@ -60,7 +60,7 @@
   padding: 12px;
   border-radius: 8px;
   margin: 0 0 1.5rem;
-  font-size: 0.875rem;
+  font-size: 14px;
 }
 
 .form-group {
@@ -69,10 +69,9 @@
 
 .form-group label {
   display: block;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
   color: #333;
   font-weight: 600;
-  font-size: 1.125rem;
 }
 
 .form-group input {
@@ -119,8 +118,7 @@
 }
 
 .form-actions {
-  display: flex !important;
-  flex-direction: row !important;
+  display: flex;
   gap: 1rem;
   margin-top: 2rem;
 }
@@ -130,7 +128,7 @@
   padding: 0.8rem;
   border: none;
   border-radius: 8px;
-  font-size: 1.15rem;
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -184,9 +182,9 @@
   text-decoration: underline;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .login-page-content {
-    padding: 2rem 1.5rem 3rem;
+    padding: 2rem 1rem 3rem;
   }
 
   .login-card {
@@ -204,7 +202,7 @@
   }
 
   .login-header p {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .login-form {
@@ -221,23 +219,22 @@
     margin-bottom: 1.2rem;
   }
 
-  /* Ensure action buttons align side-by-side on tablet */
+  /* Ensure action buttons align identically on tablet */
   .form-actions .submit-btn,
   .form-actions .cancel-btn {
-    flex: 1;
-    width: auto;
+    width: 100%;
     box-sizing: border-box;
     margin: 0;
   }
 
   .form-group label {
-    font-size: 1.1rem;
-    margin-bottom: 0.6rem;
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
   }
 
   .form-group input {
-    padding: 0.8rem;
-    font-size: 1rem;
+    padding: 0.75rem;
+    font-size: 0.95rem;
   }
 
   .toggle-visibility {
@@ -246,20 +243,15 @@
   }
 
   .form-actions {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
+    flex-direction: column;
     gap: 0.75rem;
     margin-top: 1.5rem;
   }
 
   .submit-btn,
   .cancel-btn {
-    padding: 0.85rem;
-    font-size: 1.15rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05rem;
+    padding: 0.7rem;
+    font-size: 0.95rem;
   }
 
   .signup-link {
@@ -335,15 +327,13 @@
   }
 
   .form-actions {
-    display: flex !important;
-    flex-direction: row !important;
+    flex-direction: column;
     gap: 0.6rem;
     margin-top: 1.2rem;
   }
 
   .submit-btn,
   .cancel-btn {
-    flex: 1;
     padding: 0.65rem;
     font-size: 0.9rem;
     border-radius: 6px;
