@@ -28,6 +28,14 @@
   height: 100%;
 }
 
+.fade-slide::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.4) 0%, transparent 60%);
+  z-index: 2;
+}
+
 .fade-slide.active {
   opacity: 1;
   position:relative;
@@ -77,8 +85,8 @@
 }
 
 .brand-name {
-  margin-top: 8px;
-  font-size: 15px;
+  margin-top: 0.5rem;
+  font-size: 0.9375rem; /* ~15px base */
   font-weight: 600;
   color: #333;
   text-align: center;
@@ -111,24 +119,28 @@
 
 
 .fade-overlay {
-  padding-left: 250px;
   position: absolute;
-  bottom: 70px;
-  left: 50px;
+  bottom: 12%; 
+  left: 8%;
   color: #fff;
-  max-width: 500px;
-  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
-  /* z-index: 2; */
+  max-width: 600px;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 0 2px 4px rgba(0,0,0,0.5);
+  z-index: 5;
+  pointer-events: none; /* Let clicks pass to slider buttons if needed */
 }
 
 .fade-overlay h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
 }
 
 .fade-overlay p {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-weight: 500;
   line-height: 1.4;
+  opacity: 0.95;
 }
 
 .cta-button {
@@ -162,15 +174,16 @@
   margin-bottom: 10px;
 }
 
-.section-title,h2 {
-  font-size: 24px;
+.section-title, h2 {
+  font-size: 1.5rem; /* Scales with fluid base */
   font-weight: 700;
 }
 
 .view-all-btn {
   background: #2371B1;
   border: none;
-  padding: 8px 16px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9375rem;
   color: white;
   border-radius: 6px;
   cursor: pointer;
@@ -306,9 +319,9 @@
 /* --- Shop by Offers Section --- */
 .offer-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 15px;
-  margin-top: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
 }
 
 .offer-card {
@@ -322,9 +335,9 @@
 }
 
 .offer-card h2 {
-  font-size: 40px;
-  text-shadow: 2px rgba(0, 0, 0, 0.5);
-  font-weight: bold;
+  font-size: 2.25rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  font-weight: 800;
   color: #c50505;
 }
 
@@ -528,16 +541,17 @@
 .category-card {
   background: #fff7eb;
   border: 1px solid #ede6d9;
-  border-radius: 12px;
-  padding: 15px;
+  border-radius: 14px;
+  padding: 1.25rem;
   text-align: center;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.35s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 240px;
-  padding: 12px;
+  min-width: 200px; /* Increased for iPad Air */
+  height: 280px;    /* Increased for iPad Air */
+  box-shadow: 0 4px 12px rgba(39, 60, 46, 0.05);
 }
 
 .category-card:hover {
@@ -565,9 +579,10 @@
 } */
 
 .category-card h3 {
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 1.125rem;
+  font-weight: 700;
   text-align: center;
+  color: #273c2e;
 
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -577,9 +592,8 @@
   overflow: hidden;
   text-overflow: ellipsis;
 
-  line-height: 1.2rem;
-  max-height: 2.4rem;
-  margin-top: 8px;
+  line-height: 1.3;
+  margin-top: 1rem;
 }
 
 

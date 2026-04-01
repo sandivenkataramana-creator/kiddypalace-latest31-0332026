@@ -124,7 +124,7 @@
   margin-bottom: 0.8rem;
   color: #4f6354;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.125rem;
 }
 
 .form-group input {
@@ -132,7 +132,7 @@
   padding: 1rem 1.2rem;
   border: 2px solid #ede6d9;
   border-radius: 12px;
-  font-size: 1rem;
+  font-size: 1.1rem;
   transition: all 0.3s ease;
   background: #fff8ea;
 }
@@ -156,7 +156,7 @@
   padding: 0.8rem;
   border: none;
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -246,7 +246,8 @@
   }
 
   .form-group label {
-    font-size: 0.9rem;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
   }
 
   .form-group input {
@@ -255,20 +256,21 @@
   }
 
   .form-actions {
-    flex-direction: column;
+    display: flex !important;
+    flex-direction: row !important;
     gap: 0.75rem;
   }
 
   .submit-btn,
   .cancel-btn {
-    padding: 0.75rem;
-    font-size: 0.95rem;
+    padding: 0.8rem;
+    font-size: 1.05rem;
   }
 
-  /* Ensure buttons are full-width and aligned consistently on tablet */
   .form-actions .submit-btn,
   .form-actions .cancel-btn {
-    width: 100%;
+    flex: 1 !important;
+    width: auto !important;
     box-sizing: border-box;
     margin: 0;
   }
@@ -310,12 +312,13 @@
   }
 
   .form-group input {
-    padding: 0.7rem 0.9rem;
-    font-size: 0.9rem;
+    padding: 0.8rem 1.1rem;
+    font-size: 1rem;
   }
 
   .form-actions {
-    flex-direction: column;
+    display: flex !important;
+    flex-direction: row !important;
     gap: 0.6rem;
     margin-top: 1.5rem;
   }
@@ -326,10 +329,11 @@
     font-size: 0.9rem;
   }
 
-  /* Ensure buttons are full-width and aligned consistently on small screens */
+  /* Ensure buttons are aligned side-by-side consistently on small screens */
   .form-actions .submit-btn,
   .form-actions .cancel-btn {
-    width: 100%;
+    flex: 1 !important;
+    width: auto !important;
     box-sizing: border-box;
     margin: 0;
   }
